@@ -6,6 +6,7 @@ public abstract class Turno
     public string ?NombrePaciente {get; set;}
     public int Edad {get; set;}
     public string ?EnfermedadOMotivoConsulta {get; set;}
+    public int TiempoDeEspera {get; set;}
 
 
     public Turno(int dNIpaciente, string nombrePaciente, int edad, string enfermedadOMotivoConsulta)
@@ -36,4 +37,6 @@ public abstract class Turno
         Edad=edad;
         EnfermedadOMotivoConsulta=enfermedadOMotivoConsulta;
     }
+
+    public abstract int CalcularTiempoDeEspera(int TiempoDeEspera);
 }

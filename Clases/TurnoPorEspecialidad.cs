@@ -14,4 +14,14 @@ public class TurnoPorEspecialidad : Turno
         Especialidad=especialidad;
         EsPrimeraConsulta=esPrimeraConsulta;
     }
+
+    public override int CalcularTiempoDeEspera(int TiempoDeEspera)
+    {
+        TiempoDeEspera=20;
+        if (EsPrimeraConsulta)
+        {
+            TiempoDeEspera += 15;
+        }
+        return TiempoDeEspera;
+    }
 }
